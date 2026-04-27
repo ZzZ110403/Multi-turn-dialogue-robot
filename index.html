@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 学习助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>AI 学习助手</h1>
+      <p>输入你的 API Key 后即可开始多轮对话，助手会记住上下文。</p>
+    </header>
+
+    <section class="key-section card">
+      <label for="apiKey">DashScope API Key</label>
+      <input
+        id="apiKey"
+        type="password"
+        placeholder="请输入你的 API Key（不会写入代码）"
+        autocomplete="off"
+      >
+    </section>
+
+    <section class="chat-section card">
+      <div id="chatContainer" class="chat-container" aria-live="polite"></div>
+      <div id="loading" class="loading hidden">加载中...</div>
+      <div id="error" class="error hidden"></div>
+    </section>
+
+    <section class="input-section card">
+      <textarea
+        id="userInput"
+        rows="4"
+        placeholder="请输入你的问题，按 Enter 发送（Shift + Enter 换行）"
+      ></textarea>
+      <div class="button-row">
+        <button id="sendBtn" class="btn primary">发送 / 生成</button>
+        <button id="clearBtn" class="btn danger">清空对话</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
